@@ -43,7 +43,7 @@ public struct FlowStack<Content>: View where Content: View {
 
             // HStacks are our columns
             HStack(spacing: 0) {
-              ForEach(0 ... (self.columns - 1)) { column in
+              ForEach(0 ..< self.columns) { column in
                 self.content(
                   // Pass the index to the content
                   (row * self.columns) + column,
